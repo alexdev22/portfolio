@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,25 +8,43 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-    <nav>
-        <img class="logo" src="img/logo-portfolio.svg">
-        <ul>
-            <li><a>Portfolio</a></li>
-            <li><a>Tecnologías</a></li>
-        </ul>
-    </nav>
+    <header>
+        <div class="menu-container">
+            <img class="logo" src="img/logo-portfolio.svg">
+            <div class="nav">
+                <ul>
+                    <li class="menu-item"><a href="#portfolio">Portfolio</a></li>
+                    <li class="menu-item"><a href="#tecnologias">Tecnologías</a></li>
+                    <li class="menu-item"><a href="#about">Sobre Mi</a></li>
+                </ul>
+            </div class="nav">
+            <div class="hamburger-menu pointer">
+                <div class="line-menu"></div>
+                <div class="line-menu"></div>
+                <div class="line-menu"></div>
+            </div>
+        </div>
+    </header>
     <div class="main-section">
-        <div class="intro-text-container">
-            <h1>Desarrollador Web Fullstack</h1>
+        <div class="img-container">
+        </div>
+        <div class="intro-container">
+            <img class="img-profile" src="img/foto-perfil.jpg">
+            <h1 class="mb-5 mt-5">Desarrollador Web Fullstack</h1>
             <h2>Transformando las ideas en proyectos</h2>
         </div>
-        <img class="computer" src="./img/computer.svg">
         <img class="css-img" src="./img/CSS.svg">
-        <img class="html-img"  src="./img/HTML.svg">
-        <img class="node-img"  src="./img/NODE.svg">
+        <img class="html-img" src="./img/HTML.svg">
+        <img class="node-img" src="./img/NODE.svg">
         <img class="react-img" src="./img/REACT.svg">
+
+        <h2 class="section-title" id="portfolio">Portfolio</h2>
+        <h2 class="section-title" id="tecnologias">Tecnologías</h2>
+        <h2 class="section-title" id="about">Sobre Mi</h2>
     </div>
     <script src="index.js"></script>
 </body>
+
 </html>
