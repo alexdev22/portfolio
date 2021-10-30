@@ -10,7 +10,11 @@ body {
   overflow-x: hidden;
   font-family: "Courier New", Courier, monospace;
 }
-
+.main-container {
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+}
 .mt-1 {
   margin-top: 5px;
 }
@@ -71,14 +75,16 @@ body {
   margin: 0.5rem;
 }
 .menu-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   justify-content: space-between;
   align-items: center;
+  margin: 0 auto;
 }
 .nav {
   height: 20vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   color: white;
   font-size: 0.75rem;
@@ -97,10 +103,18 @@ body {
   display: inline;
 }
 
+.react-img,
+.css-img,
+.html-img,
+.node-img {
+  width: 20%;
+}
+
 .intro-container {
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   color: white;
   text-align: left;
@@ -109,8 +123,29 @@ body {
   text-align: center;
 }
 
+.subtitle-intro {
+  font-size: 1.5rem;
+}
+
+.nav a {
+  font-size: 1.5rem;
+  margin: 0.35rem;
+}
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2.25rem;
+}
+
+hr {
+  height: 5px;
+  background: grey;
+  border: none;
+  margin: 1rem auto;
+}
 .img-profile {
-  width: 25%;
+  width: 20%;
   margin: 0 auto;
   display: block;
   clip-path: circle();
@@ -120,15 +155,67 @@ body {
   text-align: center;
   color: white;
   margin-top: 50px;
-  height: 100vh;
+  min-height: 100vh;
+}
+
+.grid-projects {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 1rem;
+}
+
+.project-container {
+  margin: 1rem;
+}
+
+.project-img {
+  width: 100%;
+}
+.tech-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.tech-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech {
+  background: rgb(139, 139, 139);
+  margin: 0.5rem;
+  border-radius: 5px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.tech-items-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech-item {
+  margin: 0.25rem;
+  font-size: 0.7rem;
+  background: rgb(54, 54, 54);
+  padding: 0.25rem;
+  border-radius: 5px;
 }
 
 @media (max-width: 500px) {
   .intro-container h1 {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
   }
   .intro-container h2 {
-    font-size: 0.9rem;
+    font-size: 0.6rem;
   }
   .img-profile {
     width: 50%;
@@ -148,9 +235,23 @@ body {
     z-index: 5;
   }
   .nav {
-    display: none;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    width: 100vw;
+    position: absolute;
+    background-color: rgb(87, 87, 87);
+    z-index: 2;
+    height: 0px;
+    opacity: 0;
+    transition: height 0.25s ease;
+    z-index: -2;
   }
-
+  .menu-container {
+    grid-template-columns: 3fr 1fr;
+  }
   .line-menu {
     width: 100%;
     height: 2px;
@@ -158,20 +259,11 @@ body {
     margin: 2px;
     border-radius: 1px;
   }
-  .active {
-    display: block;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 
-  .nav {
-    top: 0;
+  .active {
     height: 100vh;
-    width: 100vw;
-    position: absolute;
-    background-color: rgb(87, 87, 87);
-    z-index: 2;
+    z-index: 3;
+    opacity: 1;
   }
 
   .nav ul li a {
@@ -179,5 +271,16 @@ body {
     margin: 1rem;
     text-align: center;
     font-weight: bold;
+  }
+
+  .grid-projects {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-container {
+    grid-template-columns: 1fr;
+  }
+  .tech-items-grid {
+    flex-wrap: wrap;
   }
 }
