@@ -10,7 +10,28 @@ body {
   overflow-x: hidden;
   font-family: "Courier New", Courier, monospace;
 }
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+hr {
+  height: 5px;
+  background: grey;
+  border: none;
+  margin: 1rem auto;
+}
+
 .main-container {
+  height: 80vh;
   width: 75%;
   display: block;
   margin: 0 auto;
@@ -26,13 +47,10 @@ body {
   margin-bottom: 5px;
 }
 
-.pointer {
-  cursor: pointer;
-}
-
 .mb-5 {
   margin-bottom: 15px;
 }
+
 ::-webkit-scrollbar {
   width: 0.5rem;
 }
@@ -57,7 +75,7 @@ p {
 }
 .css-img {
   position: absolute;
-  top: 70%;
+  top: 10%;
   left: 50%;
   z-index: -999;
 }
@@ -78,12 +96,14 @@ p {
   height: 5rem;
   margin: 0.5rem;
 }
+
 .menu-container {
   display: flex;
   justify-content: space-between;
   height: 20vh;
   align-items: center;
 }
+
 .nav {
   color: white;
   font-size: 0.75rem;
@@ -114,9 +134,7 @@ p {
   margin: 0 auto;
   font-size: 1.25rem;
 }
-.full-landing-container {
-  min-height: 80vh;
-}
+
 .intro-container {
   position: relative;
   display: flex;
@@ -130,35 +148,42 @@ p {
   min-height: 80vh;
 }
 
-.col-1 {
-}
-
-.col-2 {
-}
-
 .subtitle-intro {
   font-size: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.home-nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-nav li {
+  list-style: none;
+}
+
+.home-nav a {
+  padding: 0.8rem;
+  background: white;
+  margin: 0.25rem;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: black;
+}
+
+.home-nav a:hover {
+  background: rgb(216, 216, 216);
 }
 
 .nav a {
   font-size: 1.5rem;
   margin: 0.35rem;
 }
-h1 {
-  font-size: 2.5rem;
-}
-h2 {
-  font-size: 2.25rem;
-}
 
-hr {
-  height: 5px;
-  background: grey;
-  border: none;
-  margin: 1rem auto;
-}
 .img-profile {
-  width: 20%;
+  width: 60%;
   margin: 0 auto;
   display: block;
   clip-path: circle();
@@ -173,7 +198,11 @@ hr {
   color: white;
   margin-top: 2rem;
 }
-
+.col-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .grid-projects {
   display: grid;
   align-items: center;
@@ -265,6 +294,7 @@ footer i {
   .node-img {
     width: 45%;
   }
+
   .hamburger-menu {
     display: block;
     width: 1.5rem;
