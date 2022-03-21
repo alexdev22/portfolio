@@ -7,47 +7,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio</title>
   <link rel="stylesheet" href="index.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@400;700&display=swap" rel="stylesheet">
+  <script src="index.js" defer></script>
 </head>
 
 <body>
-  <header>
-    <div class="menu-container">
-      <img class="logo" src="img/logo-portfolio.svg" />
-  </header>
-  <main class="content-container">
-    <div class="intro-container">
-      <div class="col-1">
-        <img class="img-profile" src="img/foto-perfil.jpg" />
-        <h1 class="mb-5 mt-5">Desarrollador Web Fullstack</h1>
+  <div class="content">
+    <header>
+      <div class="menu-container ">
+        <img class="logo" src="./img/logo-portfolio.svg"> </img>
+        <ul>
+          <li><a>Sobre Mi</a></li>
+          <li><a>Proyectos</a></li>
+          <li><a>Skills</a></li>
+        </ul>
+        </nav>
+    </header>
+    <div class="intro">
+      <div class="intro__left">
+        <h1 class="home-h1 mb-5 mt-5">Desarrollador Web Fullstack</h1>
         <div class="subtitle-intro">
           Transformando las ideas en proyectos
         </div>
-        <div class="home-nav">
+      </div>
+      <div class="intro__right">
+        <img class="img-profile" src="img/foto-perfil.jpg" />
+      </div>
+    </div>
+    <section>
+      <h2>Sobre Mi</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis iusto inventore nam facilis saepe
+        similique id vel! Nobis voluptas nisi assumenda omnis quis modi! Autem.</p>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis iusto inventore nam facilis saepe
+        similique id vel! Nobis voluptas nisi assumenda omnis quis modi! Autem.</p>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis iusto inventore nam facilis saepe
+        similique id vel! Nobis voluptas nisi assumenda omnis quis modi! Autem.</p>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis iusto inventore nam facilis saepe
+        similique id vel! Nobis voluptas nisi assumenda omnis quis modi! Autem.</p>
+    </section>
+    <section>
+      <h2>Proyectos</h2>
+    </section>
+    <section>
+      <h2>Tecnologías</h2>
+      <div class="tech-container">
+        <div class="tech">
+          <img class="tech-svg" src="./img/code.svg">
           <ul>
-            <li class="menu-item">
-              <a href="/sobre-mi.html">¿Quién soy?</a>
-            </li>
-            <li class="menu-item">
-              <a href="/portfolio.html">Portfolio</a>
-            </li>
-            <li class="menu-item">
-              <a href="/tecnologias.html">Tecnologías</a>
-            </li>
-            <li class="menu-item">
-              <a href="/contacto.html">Encuéntrame</a>
-            </li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>REACT</li>
+          </ul>
+        </div>
+        <div class="tech">
+          <img class="tech-svg" src="./img/utils.svg">
+          <ul>
+            <li>GIT</li>
+          </ul>
+        </div>
+        <div class="tech">
+          <img class="tech-svg" src="./img/disk.svg">
+          <ul>
+            <li>MYSQL</li>
           </ul>
         </div>
       </div>
-      <img class="css-img" src="./img/CSS.svg" />
-      <img class="html-img" src="./img/HTML.svg" />
-      <img class="node-img" src="./img/NODE.svg" />
-      <img class="react-img" src="./img/REACT.svg" />
-  </main>
-  <script src="index.js"></script>
+    </section>
+  </div>
 </body>
 
 </html>
